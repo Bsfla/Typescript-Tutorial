@@ -16,3 +16,4 @@ type B = 'Human '| 'Mamal' | 'Animal';
 
 type C = {[key in B] : B} // 맵드 타입스 
 const aaaa : B = {Human: 'Animal'};
+

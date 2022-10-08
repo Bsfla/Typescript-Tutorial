@@ -1,6 +1,6 @@
 //function add<T extends number>(x: T, y: T): T {
-    return x + y
-}
+// return x + y
+//}
 
 //add<number>(1, 2)
 
@@ -19,6 +19,25 @@
 // <T extends abstract new (...args: any) => any> // 생성자 타입
 // <T extends keyof any> // string | number | symbol
 
-
 //function abc(...args: number[]) {}
 
+// forEach, map 제네릭 분석
+
+interface Array<T> {
+  forEach(
+    callbackfn: (value: T, index: number, array: T[]) => void,
+    thisArg?: any
+  ): void;
+  map<U>(
+    callbackfn: (value: T, index: number, array: T[]) => U,
+    thisArg?: any
+  ): U[];
+  filter<S extends T>(
+    predicate: (value: T, index: number, array: T[]) => value is S,
+    thisArg?: any
+  ): S[];
+}
+
+["1", 2, 3].forEach((value) => {
+  console.log(value);
+});
