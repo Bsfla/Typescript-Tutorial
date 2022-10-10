@@ -36,6 +36,7 @@ interface Array<T> {
     predicate: (value: T, index: number, array: T[]) => value is S,
     thisArg?: any
   ): S[];
+  
 }
 
 ["1", 2, 3].forEach((value) => {
