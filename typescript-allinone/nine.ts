@@ -10,10 +10,10 @@ interface Z1 {
 
 const aa2a: Z1 = {a9: 'hello', b: 'world'};
 
-type A = {[key: string] : string} // 인덱스드 시그니처
+type Az = {[key: string] : string} // 인덱스드 시그니처
 
-type B = 'Human '| 'Mamal' | 'Animal';
+type B10 = 'Hu'| 'Mamal' | 'Animal';
 
-type C = {[key in B] : B} // 맵드 타입스 
-const aaaa : B = {Human: 'Animal'};
+type C = { [K in B10]: string }; // 맵드 타입스 
+const aaaa : C = {Hu: 'Animal', Mamal: 'ss', Animal: 'DD'};
 
