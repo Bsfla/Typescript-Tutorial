@@ -46,4 +46,8 @@ type R<T extends keyof any, S> = {
 
 const test: R<string, number> = { a: 3, b: 5, c: 7 };
 
+type N<T> = T extends null | undefined ? never : T;
+
 type A0 = string | null | undefined | boolean | number;
+
+const Atest: N<A0> = "S";
