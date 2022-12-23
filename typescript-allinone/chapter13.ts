@@ -1,4 +1,4 @@
-//Utility types
+//Utility type
 
 /* Partial type
 interface Profile {
